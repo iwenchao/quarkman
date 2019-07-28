@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_height_176"
+    android:background="@drawable/side_nav_bar"
+    android:gravity="bottom|center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_16"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <ImageView
+        android:id="@+id/navHeadIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:paddingTop="@dimen/dp_8"
+        android:src="@mipmap/ic_default_head" />
+
+    <TextView
+        android:id="@+id/navHeadName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp_8"
+        android:text="@string/alien"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sp_16" />
+
+</LinearLayout>

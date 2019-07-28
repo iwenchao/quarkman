@@ -2,6 +2,7 @@ package cn.iwenchaos.quarkman.mvp.main;
 
 import android.os.Bundle;
 
+import butterknife.ButterKnife;
 import cn.iwenchaos.quarkman.R;
 import cn.iwenchaos.quarkman.base.BaseActivity;
 
@@ -19,5 +20,6 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
     }
 }
