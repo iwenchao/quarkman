@@ -31,7 +31,7 @@ public abstract class BaseActivity<P extends IPresenter> extends AppCompatActivi
     }
 
     private void setView(@Nullable Bundle savedInstanceState) {
-        int layoutResId = initView(savedInstanceState);
+        int layoutResId = setLayoutRes(savedInstanceState);
         if (layoutResId != 0) {
             setContentView(layoutResId);
             mUnbinder = ButterKnife.bind(this);

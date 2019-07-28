@@ -21,13 +21,21 @@ public interface IActivity {
 
 
     /**
-     * 初始化View
+     * 设置布局
      *
      * @param savedInstanceState
      * @return 支持返回int类型，否则会抛异常
      */
     @LayoutRes
-    int initView(Bundle savedInstanceState);
+    int setLayoutRes(Bundle savedInstanceState);
+
+
+    /**
+     * 初始化控件
+     *
+     * @param savedInstanceState 缓存临时数据
+     */
+    void initView(Bundle savedInstanceState);
 
 
     /**
