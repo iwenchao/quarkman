@@ -24,8 +24,7 @@
         android:background="?android:colorBackground"
         app:headerLayout="@layout/nav_header_layout"
         app:itemBackground="@drawable/bg_without_corner"
-        app:menu="@menu/menu_main_drawer"
-        />
+        app:menu="@menu/menu_main_drawer" />
 
 
 </android.support.v4.widget.DrawerLayout>
