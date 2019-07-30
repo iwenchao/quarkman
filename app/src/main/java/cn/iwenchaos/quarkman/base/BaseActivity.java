@@ -1,10 +1,10 @@
 package cn.iwenchaos.quarkman.base;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import cn.iwenchaos.quarkman.base.delegate.IActivity;
@@ -27,7 +27,8 @@ public abstract class BaseActivity<P extends IPresenter> extends AppCompatActivi
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setView(savedInstanceState);
-
+        initView(savedInstanceState);
+        initData(savedInstanceState);
     }
 
     private void setView(@Nullable Bundle savedInstanceState) {
