@@ -28,19 +28,18 @@ import cn.iwenchaos.quarkman.mvp.main.presenter.MainPresenter;
 public class MainActivity extends BaseActivity<MainPresenter> implements MainContract.View, NavigationView.OnNavigationItemSelectedListener {
 
 
+    @BindView(R.id.appbarLayout)
+    AppBarLayout mAppbarLayout;
     @BindView(R.id.contentRecycler)
     RecyclerView mContentRecycler;
     @BindView(R.id.mainNav)
     NavigationView mMainNav;
     @BindView(R.id.mainDrawerLayout)
     DrawerLayout mMainDrawerLayout;
-    @BindView(R.id.appbarLayout)
-    AppBarLayout mAppbarLayout;
     @BindView(R.id.toolBar)
-    Toolbar mToolbar;
+    Toolbar mToolBar;
 
     MainModel mMainModel;
-
 
     @Override
     public int setLayoutRes(Bundle savedInstanceState) {
@@ -56,15 +55,15 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
     @Override
     public void initData(Bundle savedInstanceState) {
         mMainModel = new MainModel();
-        mPresenter = new MainPresenter(mMainModel,this);
+        mPresenter = new MainPresenter(mMainModel, this);
         mPresenter.onStart();
     }
 
 
     private void setupDrawerAndToolbar() {
-        setSupportActionBar(mToolbar);
-        mToolbar.setTitle(getString(R.string.main));
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,mMainDrawerLayout,mToolbar,R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        setSupportActionBar(mToolBar);
+        mToolBar.setTitle(getString(R.string.main));
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, mMainDrawerLayout, mToolBar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         mMainDrawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         mMainNav.setNavigationItemSelectedListener(this);
